@@ -19,10 +19,10 @@ const localFilter = computed({
 </script>
 
 <template>
-  <section class="bg-white border border-slate-200 rounded-xl shadow-sm p-4">
+  <section class="bg-white border mt-5 border-slate-200 rounded-xl shadow-sm p-4">
     <div class="flex items-center justify-between gap-2 mb-3">
       <h2 class="text-lg font-semibold">Online sell rates</h2>
-      <input type="text" v-model.trim="localFilter" class="px-3 py-2 border border-slate-300 rounded-lg w-64 max-w-[50vw]" placeholder="Filter by currency or rate" />
+      <!-- <input type="text" v-model.trim="localFilter" class="px-3 py-2 border border-slate-300 rounded-lg w-64 max-w-[50vw]" placeholder="Filter by currency or rate" /> -->
     </div>
     <div class="flex items-center justify-between text-xs text-slate-600 mb-2">
       <div>Base: {{ base }}</div>
