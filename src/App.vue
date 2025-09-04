@@ -6,9 +6,9 @@ import { getLatest, convertAmount } from './services/currencyApi'
 import { displayName, CURRENCY_NAMES } from './composables/useCurrencyMeta'
 
 // State
-const amount = ref(100)
+const amount = ref(1)
 const from = ref('USD')
-const to = ref('EUR')
+const to = ref('INR')
 
 const converting = ref(false)
 const converted = ref(null)
@@ -51,7 +51,6 @@ const orderedSymbols = computed(() => {
   const majors = ['USD','EUR','GBP','AUD','CAD','JPY','INR']
   const majorList = majors.filter(c => allSymbols.value.includes(c))
   const rest = allSymbols.value.filter(c => !majorList.includes(c))
-  // Exclude base from listing (rates API usually doesn't include base anyway)
   return [...majorList, ...rest].filter(c => c !== from.value)
 })
 

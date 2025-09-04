@@ -12,10 +12,6 @@ const props = defineProps({
 })
 const emit = defineEmits(['refresh', 'update:filter', 'load-more'])
 
-const localFilter = computed({
-  get: () => props.filter,
-  set: v => emit('update:filter', v),
-})
 </script>
 
 <template>
@@ -31,7 +27,7 @@ const localFilter = computed({
 
     <div class="overflow-auto border border-slate-200 rounded-lg" :class="{ 'opacity-60': loading }">
       <table class="w-full text-sm">
-        <thead class="bg-slate-50 sticky top-0">
+        <thead class="bg-slate-50  top-0">
           <tr>
             <th class="text-left p-3">Currency</th>
             <th class="text-right p-3">Online Sell Rate ({{ base }} →)</th>
